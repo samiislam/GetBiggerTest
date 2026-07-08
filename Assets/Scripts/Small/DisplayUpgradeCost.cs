@@ -11,7 +11,7 @@ public class DisplayUpgradeCost : MonoBehaviour
     UpgradeCost myUpgradeCost;
     void Start()
     {
-        myUpgradeCost = FindObjectOfType<UpgradeCost>();
+        myUpgradeCost = FindAnyObjectByType<UpgradeCost>();
         upgradeText = GetComponent<TextMeshProUGUI>();
     }
 

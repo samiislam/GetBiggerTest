@@ -13,7 +13,7 @@ public class UpgradeSystem : MonoBehaviour
 
     void Start()
     {
-        player = FindObjectOfType<Player>();
+        player = FindAnyObjectByType<Player>();
     }
     
     void Update()

@@ -11,9 +11,9 @@ public class KeyDisplay : MonoBehaviour
 
     private void Start()
     {
-        myKeysPerLevel = FindObjectOfType<KeysPerLevel>();
+        myKeysPerLevel = FindAnyObjectByType<KeysPerLevel>();
         keyText = GetComponent<TextMeshProUGUI>();
-        player = FindObjectOfType<Player>();
+        player = FindAnyObjectByType<Player>();
     }
 
     private void Update()

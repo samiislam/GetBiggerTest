@@ -16,9 +16,7 @@ namespace UnityStandardAssets._2D
         private Vector3 m_LastTargetPosition;
         private Vector3 m_CurrentVelocity;
         private Vector3 m_LookAheadPos;
-        
-        Transform selectedWeaponTransform = null;
-/* 
+/*
         bool sniper;
         bool normal;
         bool minigun; */

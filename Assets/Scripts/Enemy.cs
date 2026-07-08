@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        myPlayer = FindObjectOfType<Player>();
+        myPlayer = FindAnyObjectByType<Player>();
         myAIPath = GetComponent<AIPath>();
         myRigidbody2D = GetComponent<Rigidbody2D>();
         myTransform = GetComponent<Transform>();

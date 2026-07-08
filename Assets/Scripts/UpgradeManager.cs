@@ -149,6 +149,6 @@ public class UpgradeManager : MonoBehaviour
 
     void Update()
     {
-        player = FindObjectOfType<Player>();
+        player = FindAnyObjectByType<Player>();
     }
 }

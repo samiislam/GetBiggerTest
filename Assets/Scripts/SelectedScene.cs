@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SelectedScene : MonoBehaviour
 {
-    int currentSceneIndex = 0;
     int savedSceneIndex = 0;
     void Start()
     {
@@ -19,7 +18,7 @@ public class SelectedScene : MonoBehaviour
 
     private void SetUpSingleton()
     {
-        if(FindObjectsOfType(GetType()).Length > 1)
+        if(FindObjectsByType(GetType()).Length > 1)
         {
             Destroy(gameObject);
         }

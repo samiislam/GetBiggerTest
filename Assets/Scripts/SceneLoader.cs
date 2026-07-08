@@ -14,7 +14,7 @@ public class SceneLoader : MonoBehaviour
 
     void Start()
     {
-        mySelectedScene = FindObjectOfType<SelectedScene>();
+        mySelectedScene = FindAnyObjectByType<SelectedScene>();
     }
     public void LoadGameModeScene()
     {

@@ -11,7 +11,7 @@ public class MusicPlayer : MonoBehaviour
 
     private void  SetUpSingleton()
     {
-        if(FindObjectsOfType(GetType()).Length > 1)
+        if(FindObjectsByType(GetType()).Length > 1)
         {
             Destroy(gameObject);
         }

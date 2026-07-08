@@ -15,7 +15,7 @@ public class PowerUpButton : MonoBehaviour
     bool regenerationActive;
     void Start()
     {
-        myPlayer = FindObjectOfType<Player>();
+        myPlayer = FindAnyObjectByType<Player>();
         myButton = GetComponent<Button>();
     }
 

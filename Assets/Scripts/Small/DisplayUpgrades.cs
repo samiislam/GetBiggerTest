@@ -11,7 +11,7 @@ public class DisplayUpgrades : MonoBehaviour
     [SerializeField] int Upgrades = 0;
     void Start()
     {
-        myUpgradeSystem = FindObjectOfType<UpgradeSystem>();
+        myUpgradeSystem = FindAnyObjectByType<UpgradeSystem>();
         UpgradeText = GetComponent<TextMeshProUGUI>();
     }
 

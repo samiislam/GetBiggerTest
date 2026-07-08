@@ -78,7 +78,6 @@ public class Player : MonoBehaviour
     bool canDash;
     bool canPlaceBombs;
     bool canRegenerate;
-    bool shoot = false;
 
     HealthBar healthBar;
     SpriteRenderer mySpriteRenderer;
@@ -97,13 +96,13 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        healthBar = FindObjectOfType<HealthBar>();
-        myKeysPerLevel = FindObjectOfType<KeysPerLevel>();
-        myEnemy = FindObjectOfType<Enemy>();
+        healthBar = FindAnyObjectByType<HealthBar>();
+        myKeysPerLevel = FindAnyObjectByType<KeysPerLevel>();
+        myEnemy = FindAnyObjectByType<Enemy>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myRigidbody = GetComponent<Rigidbody2D>();
-        myUpgradeSystem = FindObjectOfType<UpgradeSystem>();
-        myDoor = FindObjectOfType<Door>();
+        myUpgradeSystem = FindAnyObjectByType<UpgradeSystem>();
+        myDoor = FindAnyObjectByType<Door>();
         myShooting = GetComponent<Shooting>();
 
         canDash = myUpgradeSystem.GetDash();
@@ -268,7 +267,7 @@ public class Player : MonoBehaviour
 
         Vector2 playerVelocity = new Vector2(ControlThrow * runSpeed, ControlDown * runSpeed);
         
-        myRigidbody.velocity = playerVelocity;
+        myRigidbody.linearVelocity = playerVelocity;
     }
 
    /*  public IEnumerator Knockback(float knockbackDuration, float knockbackPower, Transform Object)

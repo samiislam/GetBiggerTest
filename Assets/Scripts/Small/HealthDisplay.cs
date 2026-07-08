@@ -10,7 +10,7 @@ public class HealthDisplay : MonoBehaviour
 
     private void Start()
     {
-        myPlayer = FindObjectOfType<Player>();
+        myPlayer = FindAnyObjectByType<Player>();
         healthText = GetComponent<TextMeshProUGUI>();
     }
 
